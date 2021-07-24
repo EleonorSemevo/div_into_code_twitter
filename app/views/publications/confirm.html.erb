@@ -1,0 +1,10 @@
+<h3>Confirmez</h3>
+<%= form_with(model: @publication, local: true) do |form| %>
+    <%= form.hidden_field :content %>
+    <p>
+        Content: <%= @publication.content %>
+    </p>
+
+    <%= form.submit "Envoyer" %>
+    <%= form.submit "back", name:'back' %>
+<% end %>
