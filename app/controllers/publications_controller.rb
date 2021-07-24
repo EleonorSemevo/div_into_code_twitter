@@ -1,5 +1,6 @@
 class PublicationsController < ApplicationController
   def index
+    @publications = Publication.all
   end
 
   def new
@@ -19,9 +20,10 @@ class PublicationsController < ApplicationController
     end
   end
 
+
   def confirm
     @publication = Publication.new(publication_params)
-    
+
     render :new if @publication.invalid?
   end
 
