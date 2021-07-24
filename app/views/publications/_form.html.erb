@@ -1,0 +1,18 @@
+<%= form_with(model: @publication, local: true) do |form| %>
+    <% if @publication.errors.any? %>
+        <ul>
+            <% @publication.errors.full_messages.each do |msg|%>
+                <li>
+                    <%= msg %>
+                </li>    
+            <% end %>
+        </ul>        
+    <% end %>
+
+    <div class="content">
+        <%= form.label :Content %>
+        <%= form.text_field :content  %>
+    </div>
+    
+    <%= form.submit %>
+<% end %>
