@@ -3,7 +3,9 @@ class PublicationsController < ApplicationController
     @publications = Publication.all
   end
 
-  
+  def new
+    @publication = Publication.new
+  end
 
   def create
     @publication = Publication.new(publication_params)
@@ -18,6 +20,9 @@ class PublicationsController < ApplicationController
     end
   end
 
+  def edit
+    @publication = Publication.find(params[:id])
+  end
 
   def confirm
     @publication = Publication.new(publication_params)
