@@ -24,6 +24,17 @@ class PublicationsController < ApplicationController
     @publication = Publication.find(params[:id])
   end
 
+  def update
+    @publication = Publication.new
+    
+    if @publication.update(publication_params)
+      redirect_to publications_path
+    else
+      render :edit
+    end
+  end
+
+  
   def confirm
     @publication = Publication.new(publication_params)
 
