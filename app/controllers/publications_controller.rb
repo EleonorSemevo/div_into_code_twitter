@@ -34,7 +34,12 @@ class PublicationsController < ApplicationController
     end
   end
 
-  
+  def destroy
+    @publication = Publication.find(params[:id])
+    @publication.destroy 
+    redirect_to publications_path, notice: "Tweet supprimé"
+  end
+
   def confirm
     @publication = Publication.new(publication_params)
 

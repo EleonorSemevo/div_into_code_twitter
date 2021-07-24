@@ -6,7 +6,8 @@
     <% @publications.each do |publication| %>
     <tr>
         <td> <%= publication.content %> </td>
-        <td> <%= link_to 'Modifier tweet', edit_publication_path(publication.id)%> </td> 
+        <td> <%= link_to 'Modifier ce tweet', edit_publication_path(publication.id)%> </td>
+        <td> <%= link_to 'Supprimer ce tweet', publication_path(publication.id), method: :delete, data: {confirm: "Supprimer ce tweet ?"}  %> </td> 
     </tr>
     <% end %>
 </table>
