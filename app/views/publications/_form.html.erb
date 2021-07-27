@@ -1,4 +1,5 @@
-<%= form_with(model: @publication, local: true, url: choose_new_or_edit) do |form| %>
+<div class="edit-create">
+    <%= form_with(model: @publication, local: true, url: choose_new_or_edit) do |form| %>
     <% if @publication.errors.any? %>
         <ul>
             <% @publication.errors.full_messages.each do |msg|%>
@@ -9,10 +10,21 @@
         </ul>        
     <% end %>
 
-    <div class="content">
-        <%= form.label :Content %>
-        <%= form.text_field :content  %>
+    <div class="tweet">
+        <%= image_tag("profil.png", :class =>'input-image left')%>
+        <%= form.text_field :content, :class => 'my-tweet', :value =>"What's happening ?"  %>
+        <p class="everyone-tag">
+            <%= image_tag("globe.png", :class =>'globe-image')%>Everyone can reply
+        </p>
     </div>
     
-    <%= form.submit %>
+    <%= form.submit 'Tweet', :class =>'tweet-button' %>
+    <%= link_to 'View My tweets', publications_path, :class =>'tweet-button' %>   
+
+    
 <% end %>
+
+</div>
+
+
+

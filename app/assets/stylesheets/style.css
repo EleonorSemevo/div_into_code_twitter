@@ -1,0 +1,245 @@
+body{
+   
+}
+
+.head-nav{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    margin-right: 1rem;
+    width: 40%;
+}
+
+.top-nav{
+    list-style: none;
+}
+
+.top-nav a {
+    text-decoration: none;
+}
+.home{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+header{
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.search{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 20px;
+    border-style: solid;
+    margin-left: 10px;
+    width: 20%;
+    background-color: rgb(239 243 244);
+    height: 1.5rem;
+}
+
+
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.rigth {
+    float: right;
+}
+
+.left{
+    float: left;
+}
+.star-img{
+    border-style: none;
+    border-radius: 50%;
+    padding: 2px;
+    width: 30%;
+}
+.star-img:hover{
+    background-color: rgb(239 243 244);
+    margin-left: 0;
+}
+
+.star-case {
+    
+}
+
+.search_icone{
+    width: 7%;
+    padding: 2px;
+}
+
+.search-input{
+width: 100%;
+height: 20px;
+border-style: none;
+background-color: rgb(239 243 244);
+border: none;
+}
+
+.search-input:checked {
+    border-style: nono;
+}
+
+.navigation{
+    margin-right: 20px;
+}
+
+.cover {
+    width: 70%;
+    margin-left: 5%;
+}
+
+.navigation li {
+    list-style: none;
+    display: table;
+    margin-bottom: 1rem;
+}
+.navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    border-radius: 25px;
+    border-style: none;
+    border-color: black;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    
+}
+
+.navigation a:hover {
+    background-color: rgb(239 243 244);
+}
+
+.navigation li span{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 100px;
+    padding: 0;
+}
+
+.img{
+    padding: 5px;
+    width: 1.4rem;
+    
+}
+
+.mes-tweets{
+    width: 70%;
+}
+
+.rigth-nav{
+    margin: 0;
+    padding: 0;
+}
+
+.tweet-button{
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 2rem;
+    border-color: white;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(29, 161, 242);
+    text-decoration: none;
+}
+
+.tweet-button:hover{
+    background-color: rgb(239 243 244);  
+}
+
+.edit-create{
+    padding: 1rem;
+
+}
+
+.input-image{
+    width: 2rem;
+}
+
+
+
+.my-tweet{
+    width: 30rem;
+    border-style: solid;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1rem;
+    color: gray;
+    
+}
+
+.my-tweet:focus{
+   color: black;
+    
+}
+
+
+.globe-image{
+    width: 1rem;
+    margin-left: 5px;
+}
+
+.everyone-tag{
+    margin-left: 2rem;
+    border-radius: 2rem;
+    color: rgb(29, 161, 242);
+    width: 10rem;
+    padding: 10px;
+}
+
+.everyone-tag, .update-button:hover {
+    background-color: rgb(239 243 244);
+    
+}
+.formulaire{
+    border-style: solid;
+    border-width: 0 0px 1px 0;
+    width: 55%;
+}
+
+.tweet-content{
+    margin-left: 3rem;
+}
+.name{
+    padding: 10px;
+}
+
+.tweet-list{
+    border-radius: 5px;
+    padding: 10px;
+    width: 55%;
+}
+.tweet-list:hover{
+    background-color: rgb(239 243 244);
+    
+}
+
+.mes-tweet{
+    width: 40%;
+}
+
+.confirm-content{
+    color: gray;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.update-button{
+    ackground-color: rgb(239 243 244);
+    padding: 0.5rem;
+    border-radius: 25px;
+}
+
