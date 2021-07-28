@@ -1,4 +1,5 @@
 class PublicationsController < ApplicationController
+  before_action :set_publication, only: [:edit, :update, :destroy]
   def index
     @publications = Publication.all
   end
@@ -21,12 +22,9 @@ class PublicationsController < ApplicationController
   end
 
   def edit
-    @publication = Publication.find(params[:id])
   end
 
-  def update
-    @publication = Publication.new
-    
+  def update  
     if @publication.update(publication_params)
       redirect_to publications_path
     else
@@ -35,7 +33,6 @@ class PublicationsController < ApplicationController
   end
 
   def destroy
-    @publication = Publication.find(params[:id])
     @publication.destroy 
     redirect_to publications_path, notice: "Tweet supprimé"
   end
@@ -49,6 +46,10 @@ class PublicationsController < ApplicationController
   private
     def publication_params
       params.require(:publication).permit(:content)
+    end
+
+    def set_publication
+      @publication = Publication.find(params[:id])
     end
   
 end
