@@ -1,112 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>Twitter</title>
-    </head>
-    <body>
-        <div class="general clearfix">
-            <div class="navigation left">
-                <nav >
-                    <ul class="rigth-nav">
-                        <li><a href="">
-                            <%= image_tag("twitter.png", :class =>'img-twitter') %>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("home.png", :class =>'img') %>
-                                <span>Home </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("hashtag.png", :class =>'img')  %>
-                                <span>Explore</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("bell.png", :class =>'img') %>
-                                <span>Notifications</span>
-                            </a>     
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("message.png", :class =>'img') %>
-                                <span>Messages</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("bookmark.png", :class =>'img') %>
-                                <span>Bookmarks</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("tweet.png", :class =>'img') %>
-                                <span>Lists</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("tweet.png", :class =>'img') %>
-                                <span>Profile</span> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <%= image_tag("more.png", :class =>'img') %>
-                                <span>More</span>
-                            </a>
-                        </li>
-                    </ul>
-        
-                </nav>
-                <%= link_to 'Tweet', new_post_path, :class =>'tweet-button' %>
-            </div>
-            
-            <div class="clearfix left cover">
-                <header>
-                        <nav class="head-nav left">
-                            <ul class="top-nav ">
-                                <li class="left"><a class="home" href="#">Home</a></li>
-                                <li class="rigth star-case"><a href="">
-                                    <%=image_tag("stars.png", alt: "Example Image", :class =>'star-img')%>
-                                </a></li>
-                            </ul>
-                            
-                        </nav>
-                        <div class="search rigth">
-                            <%=image_tag("search.png", alt: "Example Image", :class =>'search_icone left')%>
-                            <form action="">
-                                <input type="search" name="" id="" class="left search-input">
-                            </form>
-                        </div>
-                </header>
 
-                <article class="mes-tweets clearfix">
-                    <h1>Mes tweets</h1>
-                        <% @posts.each do |post| %>
-                            <div class="tweet-list">
-                                <%= image_tag("profil.png", :class =>'input-image left')%>
-                                <span class="name">Loren</span>
-                                <p class="tweet-content">
-                                    <%= post.content %> 
-                                </p>
-                                
-                            </div>
-                            <%= link_to 'Update this tweet', edit_post_path(post.id) , :class =>'update-button' %> 
-                            <%= link_to 'Delete this tweet', post_path(post.id), method: :delete, data: {confirm: "Supprimer ce tweet ?"}, :class =>'update-button'  %> 
-                            <br />
-                        <% end %>
-                </article>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Twitter</title>
+  </head>
+
+  <body>
+    <div class="general clearfix">
+      <div class="navigation left">
+        <nav>
+          <ul class="rigth-nav">
+            <li><a href="">
+                <%= image_tag("twitter.png", :class=>'img-twitter') %>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("home.png", :class=>'img') %>
+                  <span>Home </span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("hashtag.png", :class=>'img') %>
+                  <span>Explore</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("bell.png", :class=>'img') %>
+                  <span>Notifications</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("message.png", :class=>'img') %>
+                  <span>Messages</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("bookmark.png", :class=>'img') %>
+                  <span>Bookmarks</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("tweet.png", :class=>'img') %>
+                  <span>Lists</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("tweet.png", :class=>'img') %>
+                  <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <%= image_tag("more.png", :class=>'img') %>
+                  <span>More</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <%= link_to 'Tweet' , new_post_path, :class=>'tweet-button' %>
+      </div>
+
+      <div class="clearfix left cover">
+        <header>
+          <nav class="head-nav left">
+            <ul class="top-nav ">
+              <li class="left"><a class="home" href="#">Home</a></li>
+              <li class="rigth star-case"><a href="">
+                  <%=image_tag("stars.png", alt: "Example Image" , :class=>'star-img')%>
+                </a></li>
+            </ul>
+
+          </nav>
+          <div class="search rigth">
+            <%=image_tag("search.png", alt: "Example Image" , :class=>'search_icone left')%>
+              <form action="">
+                <input type="search" name="" id="" class="left search-input">
+              </form>
+          </div>
+        </header>
+
+        <article class="mes-tweets clearfix">
+          <h1>Mes tweets</h1>
+          <% @posts.each do |post| %>
+            <div class="tweet-list">
+              <%= image_tag("profil.png", :class=>'input-image left')%>
+                <span class="name">Loren</span>
+                <p class="tweet-content">
+                  <%= post.content %>
+                </p>
+
             </div>
-        </div>   
-        <footer>
-            <p>My tweets</p>
-        </footer> 
-    </body>
+            <%= link_to 'Update this tweet' , edit_post_path(post.id) , :class=>'update-button' %>
+              <%= link_to 'Delete this tweet' , post_path(post.id), method: :delete, data:
+                {confirm: "Supprimer ce tweet ?" }, :class=>'update-button' %>
+                <br />
+                <% end %>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <p>My tweets</p>
+    </footer>
+  </body>
 </html>

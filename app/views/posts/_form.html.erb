@@ -1,27 +1,22 @@
 <div class="edit-create">
-    <%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
-        <% if @post.errors.any? %>
-            <ul>
-                <% @post.errors.full_messages.each do |msg|%>
-                    <li>
-                        <%= msg %>
-                    </li>    
-                <% end %>
-            </ul>        
+  <%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
+    <% if @post.errors.any? %>
+      <ul>
+        <% @post.errors.full_messages.each do |msg|%>
+          <li>
+            <%= msg %>
+          </li>
         <% end %>
-
-        <div class="tweet">
-            <%= image_tag("profil.png", :class =>'input-image left')%>
-            <%= form.text_field :content, :class => 'my-tweet' %>
-            <p class="everyone-tag">
-                <%= image_tag("globe.png", :class =>'globe-image')%>Everyone can reply
-            </p>
-        </div>
-        
-        <%= form.submit 'Tweet', :class =>'tweet-button' %>
-        <%= link_to 'View My tweets', posts_path, :class =>'tweet-button' %>   
+      </ul>
     <% end %>
+      <div class="tweet">
+        <%= image_tag("profil.png", :class=>'input-image left')%>
+        <%= form.text_field :content, :class=> 'my-tweet' %>
+        <p class="everyone-tag">
+          <%= image_tag("globe.png", :class=>'globe-image')%>Everyone can reply
+        </p>
+      </div>
+    <%= form.submit 'Tweet' , :class=>'tweet-button' %>
+     <%= link_to 'View My tweets' , posts_path, :class=>'tweet-button' %>
+  <% end %>
 </div>
-
-
-
