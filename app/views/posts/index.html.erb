@@ -65,7 +65,7 @@
                 </ul>
     
             </nav>
-            <%= link_to 'Tweet', new_publication_path, :class =>'tweet-button' %>
+            <%= link_to 'Tweet', new_post_path, :class =>'tweet-button' %>
         </div>
         
        <div class="clearfix left cover">
@@ -93,18 +93,18 @@
 
            
 
-            <% @publications.each do |publication| %>
+            <% @posts.each do |post| %>
             
             <div class="tweet-list">
                 <%= image_tag("profil.png", :class =>'input-image left')%>
                 <span class="name">Loren</span>
                 <p class="tweet-content">
-                    <%= publication.content %> 
+                    <%= post.content %> 
                 </p>
                 
             </div>
-             <%= link_to 'Update this tweet', edit_publication_path(publication.id) , :class =>'update-button' %> 
-            <%= link_to 'Delete this tweet', publication_path(publication.id), method: :delete, data: {confirm: "Supprimer ce tweet ?"}, :class =>'update-button'  %> 
+             <%= link_to 'Update this tweet', edit_post_path(post.id) , :class =>'update-button' %> 
+            <%= link_to 'Delete this tweet', post_path(post.id), method: :delete, data: {confirm: "Supprimer ce tweet ?"}, :class =>'update-button'  %> 
             <br />
             
             <% end %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  #get 'publications/index'
-  resources :publications do
+  #get 'posts/index'
+  resources :posts do
     collection do
       post :confirm
     end

@@ -1,9 +1,9 @@
 <h3>Confirmez</h3>
-<%= form_with(model: @publication, local: true) do |form| %>
+<%= form_with(model: @post, local: true) do |form| %>
     <%= form.hidden_field :content %>
     <p class="confirm-content">
         My tweet: <br>
-        <br> <%= @publication.content %>
+        <br> <%= @post.content %>
     </p>
 
     <%= form.submit "Envoyer", :class =>'tweet-button' %>
